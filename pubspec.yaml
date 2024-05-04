@@ -1,0 +1,36 @@
+name: hamza_s_application2
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  flutter_localizations: 
+    sdk: flutter
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.9
+  pin_code_fields: ^8.0.1
+  intl: ^0.18.0
+  connectivity_plus: ^5.0.2
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Mochiy Pop One
+      fonts: 
+        - asset: assets/fonts/MochiyPopOneRegular.ttf
+          weight: 400
+    - family: Poppins
+      fonts: 
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PoppinsLight.ttf
+          weight: 300
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
