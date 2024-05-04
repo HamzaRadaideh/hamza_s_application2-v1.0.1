@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-import '../../widgets/custom_pin_code_text_field.dart'; // ignore_for_file: must_be_immutable
+import '../../widgets/custom_pin_code_text_field.dart'; 
 
 class OtpVerificationPageBottomsheet extends StatelessWidget {
   const OtpVerificationPageBottomsheet({Key? key})

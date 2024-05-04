@@ -1,18 +1,21 @@
-// ignore_for_file: duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
 import '../../widgets/custom_checkbox_button.dart';
 import '../../widgets/custom_outlined_button.dart';
-import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
+import '../../widgets/custom_text_form_field.dart';
 
-// ignore_for_file: must_be_immutable
-class CreateNewPasswordPageScreen extends StatelessWidget {
+class CreateNewPasswordPageScreen extends StatefulWidget {
   CreateNewPasswordPageScreen({Key? key})
       : super(
           key: key,
         );
 
+  @override
+  State<CreateNewPasswordPageScreen> createState() => _CreateNewPasswordPageScreenState();
+}
+
+class _CreateNewPasswordPageScreenState extends State<CreateNewPasswordPageScreen> {
   TextEditingController passwordController = TextEditingController();
 
   TextEditingController confirmpasswordController = TextEditingController();

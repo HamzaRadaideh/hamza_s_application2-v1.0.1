@@ -1,14 +1,12 @@
-// ignore_for_file: duplicate_ignore, unnecessary_import
+
+// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-import 'package:hamza_s_application2/theme/theme_helper.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-// ignore_for_file: must_be_immutable
 
-// ignore_for_file: must_be_immutable
-class CustomPinCodeTextField extends StatelessWidget {
+class CustomPinCodeTextField extends StatefulWidget {
   CustomPinCodeTextField(
       {Key? key,
       required this.context,
@@ -37,21 +35,26 @@ class CustomPinCodeTextField extends StatelessWidget {
   final FormFieldValidator<String>? validator;
 
   @override
+  State<CustomPinCodeTextField> createState() => _CustomPinCodeTextFieldState();
+}
+
+class _CustomPinCodeTextFieldState extends State<CustomPinCodeTextField> {
+  @override
   Widget build(BuildContext context) {
-    return alignment != null
+    return widget.alignment != null
         ? Align(
-            alignment: alignment ?? Alignment.center,
+            alignment: widget.alignment ?? Alignment.center,
             child: pinCodeTextFieldWidget)
         : pinCodeTextFieldWidget;
   }
 
   Widget get pinCodeTextFieldWidget => PinCodeTextField(
-        appContext: context,
-        controller: controller,
+        appContext: widget.context,
+        controller: widget.controller,
         length: 4,
         keyboardType: TextInputType.number,
-        textStyle: textStyle ?? theme.textTheme.displayMedium,
-        hintStyle: hintStyle ?? theme.textTheme.displayMedium,
+        textStyle: widget.textStyle ?? theme.textTheme.displayMedium,
+        hintStyle: widget.hintStyle ?? theme.textTheme.displayMedium,
         inputFormatters: [FilteringTextInputFormatter.digitsOnly],
         pinTheme: PinTheme(
           fieldHeight: 91.h,
@@ -62,7 +65,7 @@ class CustomPinCodeTextField extends StatelessWidget {
           activeColor: appTheme.gray700,
           selectedColor: appTheme.gray700,
         ),
-        onChanged: (value) => onChanged(value),
-        validator: validator,
+        onChanged: (value) => widget.onChanged(value),
+        validator: widget.validator,
       );
 }

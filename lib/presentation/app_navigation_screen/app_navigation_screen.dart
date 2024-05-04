@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-// ignore: unnecessary_import
-import 'package:hamza_s_application2/theme/theme_helper.dart';
 import '../otp_verification_page_bottomsheet/otp_verification_page_bottomsheet.dart';
 
 class AppNavigationScreen extends StatelessWidget {

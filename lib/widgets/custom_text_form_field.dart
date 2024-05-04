@@ -1,8 +1,5 @@
-// ignore_for_file: unnecessary_import
-
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-import 'package:hamza_s_application2/theme/theme_helper.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(

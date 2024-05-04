@@ -1,4 +1,3 @@
-// ignore_for_file: duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
@@ -8,15 +7,19 @@ import '../../widgets/app_bar/custom_app_bar.dart';
 import '../../widgets/custom_checkbox_button.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart';
-import '../otp_verification_page_bottomsheet/otp_verification_page_bottomsheet.dart'; // ignore_for_file: must_be_immutable
+import '../otp_verification_page_bottomsheet/otp_verification_page_bottomsheet.dart'; 
 
-// ignore_for_file: must_be_immutable
-class ForgotPasswordPageScreen extends StatelessWidget {
+class ForgotPasswordPageScreen extends StatefulWidget {
   ForgotPasswordPageScreen({Key? key})
       : super(
           key: key,
         );
 
+  @override
+  State<ForgotPasswordPageScreen> createState() => _ForgotPasswordPageScreenState();
+}
+
+class _ForgotPasswordPageScreenState extends State<ForgotPasswordPageScreen> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController phoneController = TextEditingController();

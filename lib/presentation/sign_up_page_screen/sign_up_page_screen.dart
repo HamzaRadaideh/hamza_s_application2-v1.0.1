@@ -1,16 +1,18 @@
-// ignore_for_file: duplicate_ignore
-
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
+import '../../widgets/custom_text_form_field.dart';
 
-// ignore_for_file: must_be_immutable
-class SignUpPageScreen extends StatelessWidget {
+class SignUpPageScreen extends StatefulWidget {
   SignUpPageScreen({Key? key})
       : super(
           key: key,
         );
 
+  @override
+  State<SignUpPageScreen> createState() => _SignUpPageScreenState();
+}
+
+class _SignUpPageScreenState extends State<SignUpPageScreen> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController phoneController = TextEditingController();

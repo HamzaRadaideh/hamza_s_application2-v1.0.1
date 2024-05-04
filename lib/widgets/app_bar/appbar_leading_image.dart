@@ -1,13 +1,10 @@
-// ignore_for_file: duplicate_ignore, unnecessary_import
+
+// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-import 'package:hamza_s_application2/widgets/custom_image_view.dart';
-// ignore: must_be_immutable
-// ignore_for_file: must_be_immutable
 
-// ignore_for_file: must_be_immutable
-class AppbarLeadingImage extends StatelessWidget {
+class AppbarLeadingImage extends StatefulWidget {
   AppbarLeadingImage({Key? key, this.imagePath, this.margin, this.onTap})
       : super(
           key: key,
@@ -20,15 +17,20 @@ class AppbarLeadingImage extends StatelessWidget {
   Function? onTap;
 
   @override
+  State<AppbarLeadingImage> createState() => _AppbarLeadingImageState();
+}
+
+class _AppbarLeadingImageState extends State<AppbarLeadingImage> {
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        onTap?.call();
+        widget.onTap?.call();
       },
       child: Padding(
-        padding: margin ?? EdgeInsets.zero,
+        padding: widget.margin ?? EdgeInsets.zero,
         child: CustomImageView(
-          imagePath: imagePath!,
+          imagePath: widget.imagePath!,
           height: 30.adaptSize,
           width: 30.adaptSize,
           fit: BoxFit.contain,

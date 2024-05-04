@@ -1,10 +1,9 @@
-// ignore_for_file: duplicate_ignore
+
+// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/app_export.dart';
-// ignore_for_file: must_be_immutable
 
-// ignore_for_file: must_be_immutable
 class CustomCheckboxButton extends StatelessWidget {
   CustomCheckboxButton(
       {Key? key,

@@ -1,4 +1,3 @@
-// ignore_for_file: duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application2/core/utils/image_constant.dart';
@@ -10,15 +9,20 @@ import 'package:hamza_s_application2/theme/theme_helper.dart';
 import 'package:hamza_s_application2/widgets/custom_image_view.dart';
 import '../../widgets/custom_checkbox_button.dart';
 import '../../widgets/custom_outlined_button.dart';
-import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
+import '../../widgets/custom_text_form_field.dart'; 
 
-// ignore_for_file: must_be_immutable
-class LoginPageScreen extends StatelessWidget {
+
+class LoginPageScreen extends StatefulWidget {
   LoginPageScreen({Key? key})
       : super(
           key: key,
         );
 
+  @override
+  State<LoginPageScreen> createState() => _LoginPageScreenState();
+}
+
+class _LoginPageScreenState extends State<LoginPageScreen> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
